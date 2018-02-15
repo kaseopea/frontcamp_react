@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
 class PlipAuthorFilter extends Component {
-  render() {
+    render() {
 
-    return (
-      <div className="plip-author-filter">
-        <p>Authors Filter here</p>
-      </div>
-    );
-  }
+        return (
+            <div className="plip-author-filter">
+                <p>Authors Filter here</p>
+            </div>
+        );
+    }
 }
 
 export default PlipAuthorFilter;

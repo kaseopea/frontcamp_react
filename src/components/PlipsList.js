@@ -1,27 +1,27 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import PlipItem from './PlipItem';
 
 class PlipsList extends Component {
 
-  render() {
-    let plipItems = [];
+    render() {
+        let plipItems = [];
 
-    if (this.props.plips) {
-      plipItems = this.props.plips.map((plip) => {
+        if (this.props.plips) {
+            plipItems = this.props.plips.map((plip) => {
+                return (
+                    <PlipItem key={plip.id} className="plips-list-item" plip={plip}/>
+                );
+            });
+        }
+
+        //sorting functionality
+
         return (
-          <li key={plip.id} className="plips-list-item"><PlipItem plip={plip} /></li>
+            <div className="plips-list">
+                {plipItems}
+            </div>
         );
-      });
     }
-
-    //sorting functionality
-
-    return (
-      <div className="plips">
-        <ul className="plips-list">{plipItems}</ul>
-      </div>
-    );
-  }
 }
 
 export default PlipsList;
